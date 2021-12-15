@@ -1,0 +1,40 @@
+- ver las credenciales:
+	git config --global -l
+- configurar las credenciales:
+	git config --global user.name "usuario"
+	git config --global user.email "email"
+	
+- empezar git, se hace una sola vez. y debe aparecer una carpeta oculta .git
+git init
+- ver el status
+git status
+- adicionar archivos al git. con esto los archivos se ponen en una zona llamada "stage"
+git add .
+- confirmar los cambios
+git commit -m "algun mensaje"
+- si anteriormente ya se ha hecho commit y no hay ninguna carpeta o archivo nuevo se puede reemplazar los 2 comandos anteriores (add y commit) 
+por: git commit -am "mensajito"
+- ver los cambios que se haya realizado al archivo 
+git diff
+- quitar los cambios, dejar como estaba
+git checkout 
+- ver el historico de los commit
+git log
+- quitar del stage lo que se haya agregado, puede ser  todo  o un archivo. se puede verificar con el status
+	* todo:
+	git add .
+	git reset
+	* solo el archivo o carpeta:
+	git add .
+	git reset carpeta/archivo
+- ver los cambios que se han hecho sobre un archivo
+git show
+- ver las diferenciass en un archivo.
+git diff
+- rectificar el nombre del mensaje
+git commit --amend -m "mensaje"
+
+- cambiar el nombre del archivo comiteado
+git add .
+git commit -m "mensajito"
+git mv nombre_archivo nuevo_nombre_archivo
