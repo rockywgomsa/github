@@ -38,3 +38,8 @@ git commit --amend -m "mensaje"
 git add .
 git commit -m "mensajito"
 git mv nombre_archivo nuevo_nombre_archivo
+- quitar los cambios, dejarlo como estaba
+git checkout .
+- guardar los cambios localmente (no comitear) para luego seguir trabajandolos.
+git stash   --> guarda localmente y los borra para luego recuperarlos y seguir trabajando sobre ellos
+git stash apply  --> para volver los cambios que guarde con stash y seguir modificandolos
