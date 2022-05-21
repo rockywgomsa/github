@@ -1,3 +1,7 @@
+- web necesarios:
+https://training.github.com/downloads/es_ES/github-git-cheat-sheet/,m 
+https://git-scm.com/docs/git#_git_commands
+
 - ver las credenciales:
 	git config --global -l
 - configurar las credenciales:
@@ -41,8 +45,10 @@ git mv nombre_archivo nuevo_nombre_archivo
 - quitar los cambios, dejarlo como estaba
 git checkout .
 - guardar los cambios localmente (no comitear) para luego seguir trabajandolos.
-git stash   --> guarda localmente y los borra para luego recuperarlos y seguir trabajando sobre ellos
-git stash apply  --> para volver los cambios que guarde con stash y seguir modificandolos
+git stash   		--> guarda localmente y los borra para luego recuperarlos y seguir trabajando sobre ellos
+git stash apply  	--> para volver los cambios que guarde con stash y seguir modificandolos
+git stash list		--> lista lo que se tiene
+git stash pop <identificador del stash>
 
 git branch -r --> solo remotas
 git branch -a --> locales y remotas
@@ -58,5 +64,17 @@ git merge --abort
 - eliminar rama remota, situarce en otra rama
 git branch -d nombre_rama
 
-- actualizar el git, para ver las nuevas ramas creadas
+- actualizar el git, para ver las nuevas ramas creadas. Trae los cambios de todas las ramas
  git fetch   o git fetch --all
+ 
+-  ver la configuracion, para cambiar lo que desee. Por ejemplo el user, name, el editor con que trabajar (core.editor)
+git config --list
+
+- ver si el repositorio esta referenciado con git externo
+git remote show origin
+
+- ver help del comandos
+git comando --help
+
+- revertir los cambios hechos con el commit
+git revert  numero_del_commit (se obtiene con git log)
